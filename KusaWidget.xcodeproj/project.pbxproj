@@ -18,6 +18,8 @@
 		19CA71E721B76FD4001712C6 /* KusaTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19CA71DA21B76FD4001712C6 /* KusaTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		19CA71EF21B7B97A001712C6 /* Applicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71EE21B7B97A001712C6 /* Applicable.swift */; };
 		19CA71F021B7B98D001712C6 /* Applicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71EE21B7B97A001712C6 /* Applicable.swift */; };
+		19CA71F421B7BAE3001712C6 /* SquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71F221B7BAE3001712C6 /* SquareCell.swift */; };
+		19CA71F521B7BAE3001712C6 /* SquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71F321B7BAE3001712C6 /* SquareCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		19CA71E221B76FD4001712C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		19CA71E421B76FD4001712C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19CA71EE21B7B97A001712C6 /* Applicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicable.swift; sourceTree = "<group>"; };
+		19CA71F221B7BAE3001712C6 /* SquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCell.swift; sourceTree = "<group>"; };
+		19CA71F321B7BAE3001712C6 /* SquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				19CA71DF21B76FD4001712C6 /* TodayViewController.swift */,
 				19CA71E121B76FD4001712C6 /* MainInterface.storyboard */,
 				19CA71E421B76FD4001712C6 /* Info.plist */,
+				19CA71F121B7BAB7001712C6 /* Views */,
 			);
 			path = KusaTodayExtension;
 			sourceTree = "<group>";
@@ -136,6 +141,15 @@
 				19CA71EE21B7B97A001712C6 /* Applicable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		19CA71F121B7BAB7001712C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19CA71F221B7BAE3001712C6 /* SquareCell.swift */,
+				19CA71F321B7BAE3001712C6 /* SquareCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CA71F521B7BAE3001712C6 /* SquareCell.xib in Resources */,
 				19CA71E321B76FD4001712C6 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CA71F421B7BAE3001712C6 /* SquareCell.swift in Sources */,
 				19CA71F021B7B98D001712C6 /* Applicable.swift in Sources */,
 				19CA71E021B76FD4001712C6 /* TodayViewController.swift in Sources */,
 			);
