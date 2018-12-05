@@ -12,7 +12,35 @@
 		19CA71CA21B67DC7001712C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71C821B67DC7001712C6 /* Main.storyboard */; };
 		19CA71CC21B67DC9001712C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71CB21B67DC9001712C6 /* Assets.xcassets */; };
 		19CA71CF21B67DC9001712C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71CD21B67DC9001712C6 /* LaunchScreen.storyboard */; };
+		19CA71DD21B76FD4001712C6 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CA71DC21B76FD4001712C6 /* NotificationCenter.framework */; };
+		19CA71E021B76FD4001712C6 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71DF21B76FD4001712C6 /* TodayViewController.swift */; };
+		19CA71E321B76FD4001712C6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71E121B76FD4001712C6 /* MainInterface.storyboard */; };
+		19CA71E721B76FD4001712C6 /* KusaTodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19CA71DA21B76FD4001712C6 /* KusaTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19CA71E521B76FD4001712C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19CA71B921B67DC7001712C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19CA71D921B76FD4001712C6;
+			remoteInfo = KusaTodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19CA71EB21B76FD4001712C6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				19CA71E721B76FD4001712C6 /* KusaTodayExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19CA71C121B67DC7001712C6 /* KusaWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KusaWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +50,11 @@
 		19CA71CB21B67DC9001712C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19CA71CE21B67DC9001712C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19CA71D021B67DC9001712C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19CA71DA21B76FD4001712C6 /* KusaTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = KusaTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		19CA71DC21B76FD4001712C6 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		19CA71DF21B76FD4001712C6 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		19CA71E221B76FD4001712C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		19CA71E421B76FD4001712C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +65,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19CA71D721B76FD4001712C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CA71DD21B76FD4001712C6 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				19CA71C321B67DC7001712C6 /* KusaWidget */,
+				19CA71DE21B76FD4001712C6 /* KusaTodayExtension */,
+				19CA71DB21B76FD4001712C6 /* Frameworks */,
 				19CA71C221B67DC7001712C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				19CA71C121B67DC7001712C6 /* KusaWidget.app */,
+				19CA71DA21B76FD4001712C6 /* KusaTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +108,24 @@
 			path = KusaWidget;
 			sourceTree = "<group>";
 		};
+		19CA71DB21B76FD4001712C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19CA71DC21B76FD4001712C6 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19CA71DE21B76FD4001712C6 /* KusaTodayExtension */ = {
+			isa = PBXGroup;
+			children = (
+				19CA71DF21B76FD4001712C6 /* TodayViewController.swift */,
+				19CA71E121B76FD4001712C6 /* MainInterface.storyboard */,
+				19CA71E421B76FD4001712C6 /* Info.plist */,
+			);
+			path = KusaTodayExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +136,34 @@
 				19CA71BD21B67DC7001712C6 /* Sources */,
 				19CA71BE21B67DC7001712C6 /* Frameworks */,
 				19CA71BF21B67DC7001712C6 /* Resources */,
+				19CA71EB21B76FD4001712C6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19CA71E621B76FD4001712C6 /* PBXTargetDependency */,
 			);
 			name = KusaWidget;
 			productName = KusaWidget;
 			productReference = 19CA71C121B67DC7001712C6 /* KusaWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		19CA71D921B76FD4001712C6 /* KusaTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19CA71E821B76FD4001712C6 /* Build configuration list for PBXNativeTarget "KusaTodayExtension" */;
+			buildPhases = (
+				19CA71D621B76FD4001712C6 /* Sources */,
+				19CA71D721B76FD4001712C6 /* Frameworks */,
+				19CA71D821B76FD4001712C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KusaTodayExtension;
+			productName = KusaTodayExtension;
+			productReference = 19CA71DA21B76FD4001712C6 /* KusaTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +176,9 @@
 				ORGANIZATIONNAME = isaoeka;
 				TargetAttributes = {
 					19CA71C021B67DC7001712C6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					19CA71D921B76FD4001712C6 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -113,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				19CA71C021B67DC7001712C6 /* KusaWidget */,
+				19CA71D921B76FD4001712C6 /* KusaTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +213,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19CA71D821B76FD4001712C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CA71E321B76FD4001712C6 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +233,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		19CA71D621B76FD4001712C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19CA71E021B76FD4001712C6 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19CA71E621B76FD4001712C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19CA71D921B76FD4001712C6 /* KusaTodayExtension */;
+			targetProxy = 19CA71E521B76FD4001712C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		19CA71C821B67DC7001712C6 /* Main.storyboard */ = {
@@ -157,6 +266,14 @@
 				19CA71CE21B67DC9001712C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		19CA71E121B76FD4001712C6 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19CA71E221B76FD4001712C6 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,6 +398,7 @@
 		19CA71D421B67DC9001712C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KusaWidget/Info.plist;
@@ -298,6 +416,7 @@
 		19CA71D521B67DC9001712C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KusaWidget/Info.plist;
@@ -307,6 +426,42 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = info.isaoeka.KusaWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		19CA71E921B76FD4001712C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KusaTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.isaoeka.KusaWidget.KusaTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19CA71EA21B76FD4001712C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KusaTodayExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = info.isaoeka.KusaWidget.KusaTodayExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +484,15 @@
 			buildConfigurations = (
 				19CA71D421B67DC9001712C6 /* Debug */,
 				19CA71D521B67DC9001712C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19CA71E821B76FD4001712C6 /* Build configuration list for PBXNativeTarget "KusaTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19CA71E921B76FD4001712C6 /* Debug */,
+				19CA71EA21B76FD4001712C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
