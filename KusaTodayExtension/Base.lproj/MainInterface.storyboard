@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvT-It-1f1" userLabel="Year Label">
-                                <rect key="frame" x="8" y="0.0" width="304" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvT-It-1f1" userLabel="Year Label">
+                                <rect key="frame" x="8" y="4" width="304" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="ktJ-g2-m50"/>
+                                    <constraint firstAttribute="height" constant="20" id="ktJ-g2-m50"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4Mc-cY-ZRB">
-                                <rect key="frame" x="4" y="24" width="312" height="82"/>
+                                <rect key="frame" x="4" y="24" width="312" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FcH-7F-1Zy">
                                     <size key="itemSize" width="50" height="50"/>
@@ -38,7 +38,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SquareCell" id="lSo-MA-tC7" customClass="SquareCell" customModule="KusaTodayExtension" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="16" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="10" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -47,14 +47,130 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wRV-Bp-O57" userLabel="Month Stack View">
+                                <rect key="frame" x="8" y="94" width="304" height="12"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARZ-j5-pdT" userLabel="Jan Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="wBI-aV-1Rf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbd-QZ-lom" userLabel="Feb Label">
+                                        <rect key="frame" x="25.5" y="0.0" width="25" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Q7e-C4-hKh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncf-UB-UMW" userLabel="Mar Label">
+                                        <rect key="frame" x="50.5" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Q6n-J4-LeF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dw-ea-edF" userLabel="Apr Label">
+                                        <rect key="frame" x="76" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="tEK-D6-ZJl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="May " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQS-ci-Bki" userLabel="May Label">
+                                        <rect key="frame" x="101.5" y="0.0" width="25" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="mv4-Pi-c5A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJS-5f-Jhh" userLabel="Jun Label">
+                                        <rect key="frame" x="126.5" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="yAl-Cj-l8n"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLc-NZ-9x1" userLabel="Jul Label">
+                                        <rect key="frame" x="152" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Bdd-t9-esn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-Ss-gBy" userLabel="Aug Label">
+                                        <rect key="frame" x="177.5" y="0.0" width="25" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="CDL-82-hnY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ7-7Q-5JO" userLabel="Sep Label">
+                                        <rect key="frame" x="202.5" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="KFZ-Tp-gIr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vol-jR-pQA" userLabel="Oct Label">
+                                        <rect key="frame" x="228" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="xNn-rp-KC6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZW-nb-qVu" userLabel="Nov Label">
+                                        <rect key="frame" x="253.5" y="0.0" width="25" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="xVB-HT-ROX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dec" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfy-kM-Axe" userLabel="Dec Label">
+                                        <rect key="frame" x="278.5" y="0.0" width="25.5" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="Zey-x0-ruZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="vvT-It-1f1" secondAttribute="trailing" constant="8" id="1bV-MR-6lH"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="4Mc-cY-ZRB" secondAttribute="trailing" constant="4" id="4lp-JX-AMh"/>
                             <constraint firstItem="4Mc-cY-ZRB" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="4" id="6g7-SU-5L1"/>
-                            <constraint firstItem="4Mc-cY-ZRB" firstAttribute="bottom" secondItem="ssy-KU-ocm" secondAttribute="bottom" constant="-4" id="COV-P9-dFq"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="wRV-Bp-O57" secondAttribute="trailing" constant="8" id="FZl-yy-SGI"/>
+                            <constraint firstItem="wRV-Bp-O57" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="8" id="LBZ-pf-se6"/>
                             <constraint firstItem="vvT-It-1f1" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="8" id="NM8-n3-4tl"/>
-                            <constraint firstItem="vvT-It-1f1" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="Y5D-y5-Xew"/>
+                            <constraint firstItem="vvT-It-1f1" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="4" id="Y5D-y5-Xew"/>
+                            <constraint firstItem="wRV-Bp-O57" firstAttribute="bottom" secondItem="ssy-KU-ocm" secondAttribute="bottom" constant="-4" id="e9K-u1-LF5"/>
+                            <constraint firstItem="wRV-Bp-O57" firstAttribute="top" secondItem="4Mc-cY-ZRB" secondAttribute="bottom" id="fgd-dc-jlt"/>
                             <constraint firstItem="4Mc-cY-ZRB" firstAttribute="top" secondItem="vvT-It-1f1" secondAttribute="bottom" id="jxb-ah-Od7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>

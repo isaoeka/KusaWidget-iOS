@@ -101,8 +101,6 @@ extension TodayViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 
 }
