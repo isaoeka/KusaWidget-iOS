@@ -2,7 +2,7 @@
 
 Expressed the activity with grass.
 
-![sample](/sample.jpg)
+![sample](Sample.jpg)
 
 ## Usage
 
