@@ -6,7 +6,7 @@
 //  Copyright © 2018 isaoeka. All rights reserved.
 //
 
-    public let jsonData = """
+public let jsonData = """
 [
     {
         "value": 1,
@@ -27,13 +27,31 @@
         "value": 0,
     },
     {
-        "value": 0,
+        "value": 14,
     },
     {
-        "value": 0,
+        "value": 1,
     },
     {
-        "value": 2,
+        "value": 1,
+    },
+    {
+        "value": 3,
+    },
+    {
+        "value": 6,
+    },
+    {
+        "value": 13,
+    },
+    {
+        "value": 1,
+    },
+    {
+        "value": 1,
+    },
+    {
+        "value": 6,
     }
 ]
 """.data(using: .utf8)!

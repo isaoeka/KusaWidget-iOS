@@ -9,13 +9,14 @@
 import UIKit
 
 class SquareCell: UICollectionViewCell {
-    
+
     public var dayNum: Int = 0 {
         didSet {
         }
     }
-    public var value: Int = 0 {
+    public var level: Level = .level0 {
         didSet {
+            self.backgroundColor = level.color
         }
     }
     
@@ -32,7 +33,7 @@ class SquareCell: UICollectionViewCell {
     }
     
     private func setupView() {
-        self.backgroundColor = .lightGray
+        self.backgroundColor = Level.level0.color
         
     }
 }

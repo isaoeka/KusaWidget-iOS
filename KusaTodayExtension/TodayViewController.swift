@@ -9,11 +9,6 @@
 import UIKit
 import NotificationCenter
 
-
-struct DayEntity: Codable {
-    var value: Int
-}
-
 class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -22,9 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
-        
-        let _ = self.dayList // init lazy
+
         self.initView()
     }
     
@@ -47,18 +40,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 }
 
 extension TodayViewController {
+    
     private func initView() {
         let nib = UINib(nibName: "SquareCell", bundle: nil)
         self.collectionView.register(nib, forCellWithReuseIdentifier: "SquareCell")
         self.collectionView.isScrollEnabled = false
         self.collectionView.backgroundColor = .clear
-        
         self.collectionView.collectionViewLayout = UICollectionViewFlowLayout().apply {
             $0.scrollDirection = .horizontal
             $0.minimumInteritemSpacing = 1
             $0.minimumLineSpacing = 1
         }
-
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }
@@ -96,7 +88,7 @@ extension TodayViewController: UICollectionViewDataSource, UICollectionViewDeleg
         cell.dayNum = indexPath.row + 1
         
         if self.dayList.count > indexPath.row {
-            cell.value = self.dayList[indexPath.row].value
+            cell.level = Level(value: self.dayList[indexPath.row].value)
         }
         return cell
     }
