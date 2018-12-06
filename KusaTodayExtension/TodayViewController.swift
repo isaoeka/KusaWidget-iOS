@@ -13,7 +13,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private lazy var dayList: [DayEntity] = try! JSONDecoder().decode([DayEntity].self, from: jsonData)
+    private lazy var dayList: [DayEntity] = try! JSONDecoder().decode([DayEntity].self, from: dummyData)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,14 +58,15 @@ extension TodayViewController {
     private func updateFlowlayout() {
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let viewRect = self.collectionView.bounds
-            let columnCount: CGFloat = 7
-            let rowCount: CGFloat = (364 / columnCount)
-            let size: CGFloat = (viewRect.width - layout.minimumInteritemSpacing) / rowCount
+            let rowCount: CGFloat = 7
+            let columnCount: CGFloat = 52
+            let size: CGFloat = (viewRect.width - (columnCount * layout.minimumInteritemSpacing)) / columnCount
             layout.itemSize = CGSize(width: size, height: size)
             
-            let cellsHeight = (size + layout.minimumLineSpacing) * columnCount
+            let cellsHeight = (size + layout.minimumLineSpacing) * rowCount
+            let cellsWidth = (size + layout.minimumInteritemSpacing) * columnCount
             let topPadding = (viewRect.height - cellsHeight) / 2
-            let leftPadding: CGFloat = 0
+            let leftPadding = (viewRect.width - cellsWidth) / 2
             layout.sectionInset = UIEdgeInsets(
                 top: topPadding,
                 left: leftPadding,
@@ -74,13 +75,15 @@ extension TodayViewController {
             )
         }
     }
+    
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
 extension TodayViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 364
+        // YAGNI!! Make it the grid display of 7 row & 52 column
+        return 7 * 52
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
