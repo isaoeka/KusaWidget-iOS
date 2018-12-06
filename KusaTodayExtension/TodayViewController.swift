@@ -13,11 +13,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    private lazy var dayList: [DayEntity] = try! JSONDecoder().decode([DayEntity].self, from: dummyData)
+    // Acquire dummy data.
+    private var jsonData: Data {
+        let path = Bundle.main.path(forResource: "values", ofType: "json")! // Just quick forced unwrapping. XD
+        let url = URL(fileURLWithPath: path)
+        return try! Data(contentsOf: url)
+    }
+    private lazy var dayList: [DayEntity] = try! JSONDecoder().decode([DayEntity].self, from: self.jsonData)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.initView()
     }
     

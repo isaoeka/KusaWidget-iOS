@@ -7,5 +7,6 @@
 //
 
 struct DayEntity: Codable {
+    var date: String
     var value: Int
 }

@@ -20,9 +20,9 @@
 		19CA71F021B7B98D001712C6 /* Applicable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71EE21B7B97A001712C6 /* Applicable.swift */; };
 		19CA71F421B7BAE3001712C6 /* SquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71F221B7BAE3001712C6 /* SquareCell.swift */; };
 		19CA71F521B7BAE3001712C6 /* SquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71F321B7BAE3001712C6 /* SquareCell.xib */; };
-		19CA71F821B8D1BC001712C6 /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71F721B8D1BC001712C6 /* AppConst.swift */; };
 		19CA71FA21B8DCF5001712C6 /* LevelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71F921B8DCF5001712C6 /* LevelData.swift */; };
 		19CA71FD21B8DD86001712C6 /* DayEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CA71FC21B8DD86001712C6 /* DayEntity.swift */; };
+		19CA71FF21B8FEAF001712C6 /* values.json in Resources */ = {isa = PBXBuildFile; fileRef = 19CA71FE21B8FEAF001712C6 /* values.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +65,9 @@
 		19CA71EE21B7B97A001712C6 /* Applicable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applicable.swift; sourceTree = "<group>"; };
 		19CA71F221B7BAE3001712C6 /* SquareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareCell.swift; sourceTree = "<group>"; };
 		19CA71F321B7BAE3001712C6 /* SquareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareCell.xib; sourceTree = "<group>"; };
-		19CA71F721B8D1BC001712C6 /* AppConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		19CA71F921B8DCF5001712C6 /* LevelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelData.swift; sourceTree = "<group>"; };
 		19CA71FC21B8DD86001712C6 /* DayEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntity.swift; sourceTree = "<group>"; };
+		19CA71FE21B8FEAF001712C6 /* values.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = values.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,12 +133,12 @@
 		19CA71DE21B76FD4001712C6 /* KusaTodayExtension */ = {
 			isa = PBXGroup;
 			children = (
-				19CA71F721B8D1BC001712C6 /* AppConst.swift */,
 				19CA71DF21B76FD4001712C6 /* TodayViewController.swift */,
 				19CA71E121B76FD4001712C6 /* MainInterface.storyboard */,
 				19CA71E421B76FD4001712C6 /* Info.plist */,
 				19CA71F121B7BAB7001712C6 /* Views */,
 				19CA71FB21B8DD11001712C6 /* Models */,
+				19CA71FE21B8FEAF001712C6 /* values.json */,
 			);
 			path = KusaTodayExtension;
 			sourceTree = "<group>";
@@ -260,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CA71FF21B8FEAF001712C6 /* values.json in Resources */,
 				19CA71F521B7BAE3001712C6 /* SquareCell.xib in Resources */,
 				19CA71E321B76FD4001712C6 /* MainInterface.storyboard in Resources */,
 			);
@@ -284,7 +285,6 @@
 			files = (
 				19CA71F421B7BAE3001712C6 /* SquareCell.swift in Sources */,
 				19CA71FD21B8DD86001712C6 /* DayEntity.swift in Sources */,
-				19CA71F821B8D1BC001712C6 /* AppConst.swift in Sources */,
 				19CA71FA21B8DCF5001712C6 /* LevelData.swift in Sources */,
 				19CA71F021B7B98D001712C6 /* Applicable.swift in Sources */,
 				19CA71E021B76FD4001712C6 /* TodayViewController.swift in Sources */,
