@@ -10,10 +10,25 @@ import UIKit
 
 class SquareCell: UICollectionViewCell {
 
+    public var dayNum: Int = 0 {
+        didSet {
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = .blue
+        self.setupView()
     }
-
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        //hide or reset anything you want hereafter, for example
+        self.setupView()
+    }
+    
+    private func setupView() {
+        self.backgroundColor = .lightGray
+        
+    }
 }
