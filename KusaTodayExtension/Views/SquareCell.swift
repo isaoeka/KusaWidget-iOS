@@ -9,8 +9,12 @@
 import UIKit
 
 class SquareCell: UICollectionViewCell {
-
+    
     public var dayNum: Int = 0 {
+        didSet {
+        }
+    }
+    public var value: Int = 0 {
         didSet {
         }
     }

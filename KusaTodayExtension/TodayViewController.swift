@@ -9,20 +9,23 @@
 import UIKit
 import NotificationCenter
 
+
+struct DayEntity: Codable {
+    var value: Int
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    private lazy var dayList: [DayEntity] = try! JSONDecoder().decode([DayEntity].self, from: jsonData)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         
+        let _ = self.dayList // init lazy
         self.initView()
-        
-//        self.view.addSubview(UIView().apply{
-//            $0.frame = CGRect(x: 311, y: 40, width: 6, height: 6)
-//            $0.backgroundColor = .red
-//        })
     }
     
     override func viewDidLayoutSubviews() {
@@ -38,7 +41,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
-        
         completionHandler(NCUpdateResult.newData)
     }
     
@@ -61,7 +63,6 @@ extension TodayViewController {
         self.collectionView.dataSource = self
     }
 
-    
     private func updateFlowlayout() {
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             let viewRect = self.collectionView.bounds
@@ -81,7 +82,6 @@ extension TodayViewController {
             )
         }
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate
@@ -94,6 +94,10 @@ extension TodayViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SquareCell", for: indexPath) as! SquareCell
         cell.dayNum = indexPath.row + 1
+        
+        if self.dayList.count > indexPath.row {
+            cell.value = self.dayList[indexPath.row].value
+        }
         return cell
     }
 
