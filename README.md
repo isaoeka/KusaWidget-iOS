@@ -2,6 +2,8 @@
 
 Expressed the activity with grass.
 
+![sample](sample.jpg)
+
 ## Usage
 
 Please clone this repository and build with Xcode.
